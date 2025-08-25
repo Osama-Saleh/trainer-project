@@ -6,18 +6,24 @@ class CustomTextFormField extends StatelessWidget {
   final IconData? prefixIcon;
   final Widget? suffixIcon;
   final bool? obscureText;
+  final TextEditingController? controller;
+  final String? Function(String?)? validator;
   const CustomTextFormField({
     this.hintText,
     this.labelText,
     this.prefixIcon,
     this.suffixIcon,
     this.obscureText,
+    this.controller,
+    this.validator,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
+      validator: validator ,
       style: TextStyle(color: Colors.white),
       obscureText: obscureText ?? false,
       decoration: InputDecoration(
