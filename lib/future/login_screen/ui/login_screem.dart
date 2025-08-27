@@ -4,8 +4,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:trainer_project/core/images_path/images_path.dart';
 import 'package:trainer_project/core/validator/validator.dart';
-import 'package:trainer_project/future/home_student/home_student_screen.dart';
-import 'package:trainer_project/future/home_trainer/home_trainer_screen.dart';
 import 'package:trainer_project/future/login_screen/data/data_source/login_data_source.dart';
 import 'package:trainer_project/future/singup_screen/ui/signup_screen.dart';
 

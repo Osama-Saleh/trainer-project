@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:trainer_project/future/home_student/home_student_screen.dart';
-import 'package:trainer_project/future/home_trainer/home_trainer_screen.dart';
+import 'package:trainer_project/future/home_trainer/ui/home_trainer_screen.dart';
+import 'package:trainer_project/future/home_trainer/ui/view_courses.dart';
 
 class LoginDataSource {
   static final supabase = Supabase.instance.client;
@@ -32,13 +32,11 @@ class LoginDataSource {
                 ),
                 (route) => false,
               )
-            : Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomeStudentScreen(),
-                ),
+            : 
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => ViewCourses(),),
                 (route) => false,
-              );
+                )
+            ;
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
